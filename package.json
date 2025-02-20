@@ -1,0 +1,25 @@
+{
+  "name": "express-blog-sql",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "node --watch app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikaCutugno/express-blog-sql.git"
+  },
+  "author": "Erika Cutugno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/erikaCutugno/express-blog-sql/issues"
+  },
+  "homepage": "https://github.com/erikaCutugno/express-blog-sql#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0"
+  }
+}
