@@ -4,14 +4,16 @@ const postsData = require("../data/post");
 
 //Index
 const index = (req, res) => {
-  let filteredPosts = postsData;
-  const { tags } = req.query;
+  const sql = "SELECT * FROM posts";
 
-  if (tags) {
-    filteredPosts = filteredPosts.filter((elm) => elm.tags.includes(tags));
-  }
-
-  res.json(filteredPosts);
+  connection.query(sql, (err, results) => {
+    if (err) {
+      return res.status(500).json({
+        error: "Database query failed",
+      });
+    }
+    res.json(results);
+  });
 };
 
 //Show
